@@ -1,0 +1,39 @@
+
+Banking Churn Feature Engineering Pipeline - Requirements
+
+1. Objective
+Develop a PySpark data pipeline to process banking customer, subscription, and transaction data
+to engineer features for churn prediction and customer segmentation.
+
+2. Data Inputs
+- customers.csv: customer_id, name, gender, age, signup_date, is_active
+- subscriptions.csv: customer_id, plan_type, monthly_cost, start_date, end_date
+- transactions.csv: transaction_id, customer_id, txn_date, txn_amount, txn_type
+
+3. Processing Steps
+- Load CSV files with schema inference.
+- Join customer and subscription data.
+- Calculate tenure in months since subscription start date.
+- Aggregate transaction data per customer:
+  - Transaction count, total, average amounts.
+  - Date of last transaction.
+  - Count of transactions exceeding ₹10,000.
+- Engineer additional features:
+  - Days since last transaction.
+  - Monthly average spend.
+  - Tenure segmentation (New: <12 months, Mid: 12-36 months, Long: >36 months).
+- Define churn indicator based on:
+  - Customer inactivity flag.
+  - No transactions or no recent transactions (>90 days).
+- Output enriched dataset for modeling.
+
+4. Output
+- CSV or Spark DataFrame with features:
+  customer_id, age, gender, plan_type, monthly_cost, tenure_months, tenure_segment,
+  txn_count, total_txn_amount, avg_txn_amount, monthly_avg_spend, days_since_last_txn,
+  high_value_txn_count, is_churned
+
+5. Technology Stack
+- PySpark 3.x
+- Python 3.7+
+- CSV format for input/output

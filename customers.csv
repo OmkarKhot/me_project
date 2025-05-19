@@ -1,0 +1,6 @@
+customer_id,name,gender,age,signup_date,is_active
+C101,John Doe,M,34,2019-01-10,False
+C102,Jane Smith,F,45,2018-06-15,True
+C103,Ali Khan,M,29,2020-07-01,True
+C104,Wei Zhang,M,54,2017-03-22,False
+C105,Maria Lopez,F,40,2019-11-05,True

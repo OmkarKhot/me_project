@@ -1,0 +1,6 @@
+transaction_id,customer_id,txn_date,txn_amount,txn_type
+T001,C101,2023-01-01,200.0,debit
+T002,C102,2023-05-10,5000.0,credit
+T003,C103,2023-04-11,15000.0,credit
+T004,C104,2022-12-30,300.0,debit
+T005,C105,2023-05-12,12000.0,credit

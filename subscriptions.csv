@@ -1,0 +1,6 @@
+customer_id,plan_type,monthly_cost,start_date,end_date
+C101,Savings,0,2019-01-10,2023-01-01
+C102,Savings,0,2018-06-15,
+C103,Current,100,2020-07-01,
+C104,Savings,0,2017-03-22,2022-12-31
+C105,Current,100,2019-11-05,
